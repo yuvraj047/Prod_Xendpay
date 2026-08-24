@@ -1,0 +1,10 @@
+# Serve index.html for any route that isn't a real file, so client-side
+# routing (React Router) works correctly on Apache-based hosting such as
+# GoDaddy shared hosting/cPanel.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

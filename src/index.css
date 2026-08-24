@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #ECEAE1;
+  color: #10141F;
+}
+
+::selection {
+  background-color: #D9A441;
+  color: #10141F;
+}
+
+:focus-visible {
+  outline: 2px solid #D9A441;
+  outline-offset: 3px;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rail-rule {
+  height: 1px;
+  background-image: repeating-linear-gradient(to right, #C9C6B8 0, #C9C6B8 6px, transparent 6px, transparent 12px);
+}
+
+.rail-rule-solid {
+  height: 1px;
+  background-color: #C9C6B8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

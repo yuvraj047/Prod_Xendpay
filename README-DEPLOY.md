@@ -55,15 +55,18 @@ npm run preview
 6. Visit the domain — the site should be live within minutes (DNS
    propagation can take a little longer right after domain purchase).
 
-## 4. Wiring up the contact form
+## 4. Wiring up the contact form to your business email
 
-The form on `/contact` currently opens the visitor's email client with a
-pre-filled enquiry addressed to `info@xendpaysolutions.com` — this works
-with zero backend, which fits static GoDaddy hosting. If you'd rather
-capture submissions directly (a database, a spreadsheet, GoDaddy's own
-form-to-email tool, or a service like Formspree), swap the `handleSubmit`
-function in `src/components/ContactForm.jsx` for a `fetch()` POST to that
-endpoint, then rebuild and re-upload.
+The form on `/contact` sends via EmailJS directly to your GoDaddy business
+email once configured — see **EMAIL-SETUP.md** for the full walkthrough
+(buying the mailbox, connecting it to EmailJS, and adding the three keys
+to a `.env` file). Until that's set up, it falls back to opening the
+visitor's own email client instead, so it's never fully broken in the
+meantime.
+
+Important: since this is a static build, `.env` values are baked in at
+**build time** — always run `npm run build` again after creating or
+changing `.env`, then re-upload the fresh `dist/` folder.
 
 ## 5. Updating content later
 

@@ -15,11 +15,11 @@ export default function WhyUs() {
         <div className="max-w-content mx-auto px-5 md:px-8 py-16 md:py-20">
           <div className="flex flex-col gap-0">
             {WHY_US.map((item, i) => (
-              <div key={item.title} className="flex gap-5 md:gap-8 py-6 border-b border-line last:border-b-0">
+              <div key={item.title} className="flex gap-5 md:gap-8 py-6 border-b border-subtle last:border-b-0">
                 <Stop index={i + 1} color={i % 2 === 0 ? "amber" : "teal"} />
                 <div>
-                  <p className="font-display font-semibold text-lg text-ink">{item.title}</p>
-                  <p className="mt-1.5 text-sm md:text-base text-inkgrey font-body leading-relaxed max-w-xl">
+                  <p className="font-display font-semibold text-lg text-basetext">{item.title}</p>
+                  <p className="mt-1.5 text-sm md:text-base text-muted font-body leading-relaxed max-w-xl">
                     {item.copy}
                   </p>
                 </div>

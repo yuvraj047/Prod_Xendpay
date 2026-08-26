@@ -16,7 +16,7 @@ export default function RailHero() {
   return (
     <svg
       viewBox="0 0 520 220"
-      className="w-full h-auto max-w-[520px]"
+      className="w-full h-auto max-w-[520px] text-basetext"
       role="img"
       aria-label="Diagram showing AEPS, BBPS, DMT, Payouts and API rails converging into one Xendpay platform line"
     >
@@ -37,7 +37,7 @@ export default function RailHero() {
             y={s.y - 10}
             fontFamily="'IBM Plex Mono', monospace"
             fontSize="10"
-            fill="#10141F"
+            fill="currentColor"
             letterSpacing="0.5"
           >
             {s.label}
@@ -47,20 +47,20 @@ export default function RailHero() {
       <path
         d={`M ${mergeX} ${trunkY} L 480 ${trunkY}`}
         fill="none"
-        stroke="#10141F"
+        stroke="currentColor"
         strokeWidth="3"
         strokeLinecap="round"
         className="rail-draw"
         style={{ animationDelay: "450ms" }}
       />
-      <circle cx="480" cy={trunkY} r="6" fill="#10141F" />
-      <circle cx="480" cy={trunkY} r="10" fill="none" stroke="#10141F" strokeWidth="1" opacity="0.35" />
+      <circle cx="480" cy={trunkY} r="6" fill="currentColor" />
+      <circle cx="480" cy={trunkY} r="10" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35" />
       <text
         x="425"
         y={trunkY - 16}
         fontFamily="'IBM Plex Mono', monospace"
         fontSize="10"
-        fill="#10141F"
+        fill="currentColor"
         letterSpacing="0.5"
       >
         XENDPAY

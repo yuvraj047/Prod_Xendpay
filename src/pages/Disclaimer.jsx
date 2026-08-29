@@ -17,16 +17,16 @@ export default function Disclaimer() {
       <section>
         <div className="max-w-content mx-auto px-5 md:px-8 py-14 md:py-16 max-w-3xl flex flex-col gap-5">
           {PARAGRAPHS.map((p, i) => (
-            <p key={i} className="text-inkgrey font-body leading-relaxed">
+            <p key={i} className="text-muted font-body leading-relaxed">
               {p}
             </p>
           ))}
           <div className="mt-4">
-            <p className="font-display font-semibold text-ink mb-2">For Queries</p>
-            <p className="text-inkgrey font-body">Xendpay Solutions Private Limited</p>
-            <p className="text-inkgrey font-body">
+            <p className="font-display font-semibold text-basetext mb-2">For Queries</p>
+            <p className="text-muted font-body">Xendpay Solutions Private Limited</p>
+            <p className="text-muted font-body">
               Email:{" "}
-              <a href={`mailto:${COMPANY_EMAIL}`} className="text-teal hover:text-ink">
+              <a href={`mailto:${COMPANY_EMAIL}`} className="text-teal hover:text-basetext">
                 {COMPANY_EMAIL}
               </a>
             </p>

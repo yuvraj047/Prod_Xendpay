@@ -2,14 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light theme (default variable set) */
+:root {
+  --base: 236 234 225;        /* #ECEAE1 warm paper page background */
+  --basetext: 16 20 31;       /* #10141F ink primary text */
+  --surface: 245 244 238;     /* #F5F4EE card surface */
+  --surfacemuted: 225 223 212;/* #E1DFD4 subtle section background */
+  --muted: 91 100 112;        /* #5B6470 secondary text */
+  --subtle: 201 198 184;      /* #C9C6B8 borders / dividers */
+}
+
+/* Dark theme — the site's default; applied via .dark on <html> */
+.dark {
+  --base: 10 13 20;           /* #0A0D14 near-black navy page background */
+  --basetext: 236 234 225;    /* #ECEAE1 warm paper primary text */
+  --surface: 19 24 36;        /* #131824 elevated card surface */
+  --surfacemuted: 14 18 27;   /* #0E121B recessed section background */
+  --muted: 148 156 172;       /* #94 9C AC cool secondary text */
+  --subtle: 34 41 56;         /* #222938 borders / dividers */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #ECEAE1;
-  color: #10141F;
+  background-color: rgb(var(--base));
+  color: rgb(var(--basetext));
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 ::selection {
@@ -31,12 +52,24 @@ body {
 
 .rail-rule {
   height: 1px;
-  background-image: repeating-linear-gradient(to right, #C9C6B8 0, #C9C6B8 6px, transparent 6px, transparent 12px);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgb(var(--subtle)) 0,
+    rgb(var(--subtle)) 6px,
+    transparent 6px,
+    transparent 12px
+  );
 }
 
 .rail-rule-solid {
   height: 1px;
-  background-color: #C9C6B8;
+  background-color: rgb(var(--subtle));
+}
+
+/* Golden glow applied to the signature rail icon only in dark mode */
+.dark .rail-glow {
+  filter: drop-shadow(0 0 6px rgba(217, 164, 65, 0.65))
+    drop-shadow(0 0 16px rgba(217, 164, 65, 0.35));
 }
 
 @media (prefers-reduced-motion: reduce) {

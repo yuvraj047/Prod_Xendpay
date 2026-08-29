@@ -7,7 +7,7 @@ export default function Stop({ index, color = "amber" }) {
   return (
     <div className={`flex items-center justify-center w-9 h-9 rounded-full border ${ring} shrink-0`}>
       <span className={`w-1.5 h-1.5 rounded-full ${dot} mr-1.5`} />
-      <span className="font-mono text-xs text-ink">{String(index).padStart(2, "0")}</span>
+      <span className="font-mono text-xs text-basetext">{String(index).padStart(2, "0")}</span>
     </div>
   );
 }

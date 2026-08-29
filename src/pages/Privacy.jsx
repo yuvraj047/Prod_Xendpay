@@ -44,12 +44,12 @@ export default function Privacy() {
         <div className="max-w-content mx-auto px-5 md:px-8 py-14 md:py-16 max-w-3xl flex flex-col gap-10">
           {SECTIONS.map((s) => (
             <div key={s.heading}>
-              <h2 className="font-display font-semibold text-xl text-ink mb-3">{s.heading}</h2>
-              {s.body && <p className="text-inkgrey font-body leading-relaxed">{s.body}</p>}
+              <h2 className="font-display font-semibold text-xl text-basetext mb-3">{s.heading}</h2>
+              {s.body && <p className="text-muted font-body leading-relaxed">{s.body}</p>}
               {s.list && (
                 <ul className="mt-2 flex flex-col gap-2">
                   {s.list.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-inkgrey font-body">
+                    <li key={item} className="flex items-center gap-3 text-muted font-body">
                       <span className="w-1.5 h-1.5 rounded-full bg-amber shrink-0" />
                       {item}
                     </li>
@@ -59,11 +59,11 @@ export default function Privacy() {
             </div>
           ))}
           <div>
-            <h2 className="font-display font-semibold text-xl text-ink mb-3">Contact</h2>
-            <p className="text-inkgrey font-body">Xendpay Solutions Private Limited</p>
-            <p className="text-inkgrey font-body">
+            <h2 className="font-display font-semibold text-xl text-basetext mb-3">Contact</h2>
+            <p className="text-muted font-body">Xendpay Solutions Private Limited</p>
+            <p className="text-muted font-body">
               Email:{" "}
-              <a href={`mailto:${COMPANY_EMAIL}`} className="text-teal hover:text-ink">
+              <a href={`mailto:${COMPANY_EMAIL}`} className="text-teal hover:text-basetext">
                 {COMPANY_EMAIL}
               </a>
             </p>

@@ -7,7 +7,7 @@ export function ThemeProvider({ children }) {
   // Default is dark mode, matching the inline script in index.html that
   // sets the class before React mounts (avoids a flash of the wrong theme).
   const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") return "dark";
+    if (typeof window === "undefined") return "light";
     return localStorage.getItem(STORAGE_KEY) === "light" ? "light" : "dark";
   });
 

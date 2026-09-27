@@ -15,7 +15,7 @@
       (function () {
         try {
           var stored = localStorage.getItem("xendpay-theme");
-          if (stored !== "light") document.documentElement.classList.add("dark");
+          if (stored !== "light") document.documentElement.classList.add("light");
         } catch (e) {
           document.documentElement.classList.add("dark");
         }

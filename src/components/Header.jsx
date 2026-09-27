@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
 import logo from "../assets/logu.jpeg";
 
 const NAV = [
@@ -68,7 +67,7 @@ export default function Header() {
 
         {/* Mobile Controls */}
         <div className="lg:hidden flex items-center gap-2">
-          <ThemeToggle />
+    
 
           <button
             type="button"

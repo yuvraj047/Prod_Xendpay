@@ -56,7 +56,7 @@ export default function Header() {
 
         {/* Desktop Get Started */}
         <div className="hidden lg:flex items-center gap-4">
-          <ThemeToggle />
+      
 
           <Link
             to="/contact"

@@ -24,13 +24,7 @@ export default function LoadingScreen({ onFinish }) {
       role="status"
       aria-label="Loading Xendpay Solutions"
     >
-      <svg
-        width="64"
-        height="64"
-        viewBox="0 0 32 32"
-        className="rail-glow loader-rise"
-        aria-hidden="true"
-      >
+      <img src="/path/to/your-image.png" alt="Logo" width="22" height="22" />
         <rect width="32" height="32" rx="7" fill="#10141F" />
         <path
           d="M4 20 L12 20 L16 12 L28 12"

@@ -8,12 +8,12 @@ export function ThemeProvider({ children }) {
   // sets the class before React mounts (avoids a flash of the wrong theme).
   const [theme, setTheme] = useState(() => {
     if (typeof window === "undefined") return "light";
-    return localStorage.getItem(STORAGE_KEY) === "light" ? "light" : "dark";
+    return localStorage.getItem(STORAGE_KEY) === "light" ? "light" : "light";
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
+    root.classList.toggle("light", theme === "light");
     localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 

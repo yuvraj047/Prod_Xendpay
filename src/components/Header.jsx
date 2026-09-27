@@ -19,7 +19,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-base/95 backdrop-blur border-b border-subtle">
       <div className="max-w-content mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-display font-semibold text-lg tracking-tight text-basetext" onClick={() => setOpen(false)}>
-          <img src=" " alt="Logo" width="22" height="22" />
+          <img src/assets/logu.jpeg=" " alt="Logo" width="22" height="22" />
           Xendpay
         </Link>
 
